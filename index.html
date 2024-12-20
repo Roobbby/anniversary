@@ -56,6 +56,7 @@
             position: relative;
             overflow: hidden;
         }
+
         /* Efek Love yang Jatuh */
         .love {
             position: absolute;
@@ -205,6 +206,7 @@
         .section p {
             text-align: justify;
         }
+        
     </style>
 </head>
 
@@ -374,8 +376,9 @@
                 currentIndex = sections.length - 1;
             }
 
-            // Tampilkan section baru
+            // Tampilkan section baru dan gulir ke atas
             sections[currentIndex].classList.add('active');
+            sections[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'start' });
 
             // Perbarui visibilitas tombol
             updateButtons(sections.length);
